@@ -21,7 +21,7 @@ class profile::netbackup {
   source        => 'http://10.147.8.18/Sw/backup/NetBackup_7.7.2_CLIENTS2-tar',
   creates       => '/tmp/NetBackup_7.7.2_CLIENTS2',
   cleanup       => true,
-  }
+  }->
 class { 'netbackup::client':
     installer       => '/tmp/NetBackup_7.7.2_CLIENTS2/install',
     version         => '7.7.2',
